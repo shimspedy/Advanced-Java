@@ -12,12 +12,12 @@ class StudentLoan {
         this.termInYears = termInYears;
     }
 
-    // Method to calculate monthly payment based on loan details
+    // Method to calculate the monthly payment based on loan details
     public double calculateMonthlyPayment() {
         double monthlyInterestRate = interestRate / 12 / 100;
         int termInMonths = termInYears * 12;
         // Formula to calculate the monthly payment
-        return (loanAmount * monthlyInterestRate) / (1 - Math.pow(1 + monthlyInterestRate, -termInMonths));
+        return (loanAmount * monthlyInterestRate) / (1 - Math.pow( 1 + monthlyInterestRate, - termInMonths ));
     }
 
     // Method to display the loan details
@@ -26,7 +26,7 @@ class StudentLoan {
         System.out.println("Interest Rate: " + interestRate + "%");
         System.out.println("Term: " + termInYears + " years");
         System.out.println("Monthly Payment: $" + calculateMonthlyPayment());
+        System.out.println(); // To add a blank line between loan details
     }
 }
-
 
