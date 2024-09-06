@@ -1,32 +1,46 @@
-// Class definition for Student Loan
-class StudentLoan {
-    // Attributes of the Student Loan
-    double loanAmount;
-    double interestRate;
-    int termInYears;
 
-    // Constructor to initialize the loan details
-    public StudentLoan(double loanAmount, double interestRate, int termInYears) {
+/**
+ * This class shows a student lloan amount, interest rate, and term.
+ */
+class StudentLoan {
+    private double loanAmount;
+    private double interestRate;
+    private int termInYears;
+
+    /**
+     * Constructs a student loan with the specified loan amount, interest rate, and term.
+     * 
+     * @param loanAmount the total amount of the loan
+     * @param interestRate the annual interest rate as a percentage
+     * @param termInYears the term of the loan in years
+     */
+
+    public  StudentLoan(double loanAmount, double interestRate, int termInYears) {
         this.loanAmount = loanAmount;
         this.interestRate = interestRate;
         this.termInYears = termInYears;
     }
 
-    // Method to calculate the monthly payment based on loan details
+    /**
+     * Calculates the monthly payment for this loan.
+     * 
+     * @return the monthly payment amount
+     */
     public double calculateMonthlyPayment() {
         double monthlyInterestRate = interestRate / 12 / 100;
         int termInMonths = termInYears * 12;
-        // Formula to calculate the monthly payment
-        return (loanAmount * monthlyInterestRate) / (1 - Math.pow( 1 + monthlyInterestRate, - termInMonths ));
+        return (loanAmount * monthlyInterestRate) / (1 - Math.pow(1 + monthlyInterestRate, - termInMonths));
     }
 
-    // Method to display the loan details
+    /**
+     * Displays the details of the loan, including the loan amount, interest rate, term, 
+     * and the calculated monthly payment.
+     */
     public void displayLoanDetails() {
         System.out.println("Loan Amount: $" + loanAmount);
         System.out.println("Interest Rate: " + interestRate + "%");
         System.out.println("Term: " + termInYears + " years");
         System.out.println("Monthly Payment: $" + calculateMonthlyPayment());
-        System.out.println(); // To add a blank line between loan details
+        System.out.println(); // Blank line for readability
     }
 }
-

@@ -1,13 +1,13 @@
+### Classes
+the class provides a blueprint of how objects will be created. It is essentially an important category in object-oriented programming. A class describes the data that objects will possess, along with the actions, better known as methods, which the objects can perform.
 
-A **class** is like a blueprint for creating objects. It defines the structure (attributes) and behaviors (methods) of something, like a student loan. A class doesn't store any actual data; it just tells you what data and actions an object should have.
+### Objects
+Every Java program is composed of objects. Various objects interact with each other by each object being an instance of a class. A class defines a set of objects that all exhibit the same behavior. A class defines one scope of methods that may be used on its objects. This set of methods is commonly known as the public interface to the class. An object will have its private data; that is not accessible to the rest of the objects directly. Provision of a public interface while hiding the implementation details is called encapsulation.
 
+### Differences between a class and object
 
-An **object** is a specific instance of a class. It holds real data and performs actions defined by the class. In this example, `loan1` and `loan2` are objects of the `StudentLoan` class, representing two different loans for two different students.
-
-
-
-
-
+A class is a blueprint, while an object is an instance of that class.
+A class defines the structure and behavior, but an object stores the actual data and can perform the behavior.
 
 
 
@@ -50,4 +50,4 @@ public class StudentLoanTester {
         StudentLoan loan2 = new StudentLoan(20000, 4.0, 10);
         loan2.displayLoanDetails();
     }
-}
+}```
