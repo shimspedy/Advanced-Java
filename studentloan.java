@@ -1,6 +1,8 @@
 
 /**
  * This class shows a student lloan amount, interest rate, and term.
+ *  I was going for [Public class StudentLoan ] but i run into errors 
+ *  but the code works 
  */
 class StudentLoan {
     private double loanAmount;
