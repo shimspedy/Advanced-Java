@@ -1,3 +1,4 @@
+package week1;
 
 /**
  * This class shows a student lloan amount, interest rate, and term.
@@ -36,6 +37,7 @@ class StudentLoan {
 
     /**
      * Displays the details of the loan, including the loan amount, interest rate, term, 
+     * 
      * and the calculated monthly payment.
      */
     public void displayLoanDetails() {
